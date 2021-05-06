@@ -1,0 +1,877 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+/* font-family: 'Abril Fatface', cursive; */
+@font-face {
+    font-family: 'Wemakeprice';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Wemakeprice-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Wemakeprice';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Wemakeprice-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* font-family: 'Wemakeprice' */
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #f1f1f1
+}
+
+.clear_fix::after,
+.clear_fix::before {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+body {
+    background-color: #000;
+    color: #f1f1f1;
+    position: relative;
+}
+
+/* 헤더메뉴 */
+#header {
+    width: 100%;
+    height: 100px;
+    position: relative;
+    background-color:rgba(0,0,0,0.5)
+}
+
+.header_inner {
+    width: 1200px;
+    height: 100px;
+    position: absolute;
+    z-index: 100;
+    margin: 0 auto;
+}
+
+.header_inner h1 {
+    line-height: 100px;
+    height: 70px;
+    float: left;
+    background: url("../img/Logo2.png") no-repeat center;
+    background-size: 70%;
+    width: 240px;
+    height: 100px;
+    text-indent: -99999px;
+    box-sizing: border-box;
+    padding: 5px;
+    margin-left: 200px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.header_inner h1 a {display: block; width: 100%;}
+
+.header_inner .main_nav {
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    text-align: center;
+    position: relative;
+    top: 40px;
+    left: 200px;
+    text-align: center;
+}
+
+.header_inner .main_nav>li {
+    line-height: 40px;
+}
+
+.header_inner .main_nav>li>a {
+    font-family: 'Abril Fatface', cursive;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 20px;
+    display: block;
+    box-sizing: border-box;
+    transition: all 0.3s;
+}
+
+.header_inner .main_nav>li:hover>a {
+    color: #fa306f;
+}
+
+.header_inner .sub_nav {
+    display: none;
+}
+
+.header_inner .sub_nav li {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.header_inner .sub_nav li a {
+    font-family: 'Abril Fatface', cursive;
+    color: #f1f1f1;
+    display: block;
+    width: 100%;
+    transition: all 0.3s;
+}
+
+.header_inner .sub_nav li:hover a {
+    color: wheat;
+    font-size: 20px;
+}
+
+/* 헤더메인 */
+#main{
+    width: 100%;
+    height: 1000px;
+    background: url(../img/main\(1\).png)no-repeat center 0;
+    position: absolute;
+    top: 0;
+}
+
+.main_img{
+    width: 100%;
+    height: 1000px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+}
+.head_in {
+    width: 1200px;
+    height: 700px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.get_ready {
+    position: absolute;
+    top: 210px;
+    left: -130px;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.get_ready.on{left: 130px;opacity: 1;}
+
+.get_ready img{
+    width: 80%;
+}
+
+.allday {
+    position: absolute;
+    top: 330px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all 0.3s;
+}
+.allday img{
+    width: 80%;    
+}
+
+.allday.on{opacity: 1;}
+
+.everybody {
+    position: absolute;
+    bottom: 110px;
+    right: -250px;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.everybody img{
+    width: 80%;
+}
+
+.everybody.on{right: 0;opacity: 1;}
+
+/* 라인업 */
+.line_up{
+    width: 800px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0px;
+    cursor: pointer;
+    z-index: 100;
+    margin-top: 150px;
+    transition: all 0.5s;
+    font-family: 'Wemakeprice';
+}
+
+
+.line01{
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.jaebum{width: 215px;position: relative;transition: all 0.7s;top: 400px;}
+
+.jaebum.act{top: 0;}
+.jaebum:hover{transform: scale(1.1);}
+.jaebum>p{width: 215px;height: 246px;background: rgba(0,0,0,.5);position: absolute;top: 0;left: 0;display: none}
+
+.line_txt01>h1{position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);}
+.line01>li>h1{
+    text-align: center;
+    line-height: 1.5;
+    font-size: 38px;
+    font-family: 'Wemakeprice';
+    width: 380px;
+    color: #0bb63e;
+    text-shadow: -2px 2px 0px wheat;
+    width:360px;
+}
+.line_txt01{display: none}
+.line01>li>h1>span{font-size: 16px;color: #f1f1f1;text-shadow: none}
+.line_txt01 {
+    width: 160px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    }
+.line_txt01::after,
+.line_txt01::before{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 0%;
+    height: 0%;
+    border: 1px #fff;
+    transition: all 0.5s
+    }
+
+.line_txt01::after {
+    width: 100%;
+    border-style:none solid;
+/*                  보더 위아래  좌우*/
+            
+        }
+.line_txt01::before {
+    height: 100%;
+    border-style:solid none;
+        
+    }
+.line_txt01:hover::after{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    }
+.line_txt01:hover::before{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    }
+/*박재범*/
+
+.ph-1{width: 215px;position: relative;transition: all 0.7s;top: 400px;}
+.ph-1.act{top: 0;}
+.ph-1:hover{transform: scale(1.1);}
+.ph-1>p{width: 215px;height: 246px;background: rgba(0,0,0,.5);position: absolute;top: 0;left: 0;display: none}
+
+.line_txt02>h1{position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);}
+.line01>li>h1{
+    text-align: center;
+    line-height: 1.5;
+    font-size: 38px;
+    font-family: 'Wemakeprice';
+    width: 380px;
+    color: #0bb63e;
+    text-shadow: -2px 2px 0px wheat;
+    width:360px;
+}
+.line01>li>h1>span{font-size: 16px;color: #f1f1f1;text-shadow: none}
+.line_txt02{display: none}
+.line_txt02 {
+    width: 160px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    }
+.line_txt02::after,
+.line_txt02::before{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 0%;
+    height: 0%;
+    border: 1px #fff;
+    transition: all 0.5s
+    }
+
+.line_txt02::after {
+    width: 100%;
+    border-style:none solid;
+/*                  보더 위아래  좌우*/
+            
+        }
+.line_txt02::before {
+    height: 100%;
+    border-style:solid none;
+        
+    }
+.line_txt02:hover::after{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    }
+.line_txt02:hover::before{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    }
+
+/*    ph-1*/
+
+
+
+.line02{
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    align-items: center;
+    position: relative;
+    transition: all 0.7s;
+    top: 400px;
+
+}
+.line02.act{top: 0;}
+
+.chung_ha{width: 215px;position: relative;transition: all 0.3s;}
+.chung_ha:hover{transform: scale(1.1);}
+.chung_ha>p{width: 215px;height: 295px;background: rgba(0,0,0,.5);position: absolute;top: 0;left: 0;display: none}
+
+.line_txt03>h1{position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);text-align: center}
+.line02>li>h1{
+    text-align: center;
+    line-height: 1.5;
+    font-size: 38px;
+    font-family: 'Wemakeprice';
+    width: 380px;
+    color: #0bb63e;
+    text-shadow: -2px 2px 0px wheat;
+    display: none
+    
+}
+.line02>li>h1>span{font-size: 16px;color: #f1f1f1;text-shadow: none}
+.line_txt03{display: none}
+.line_txt03 {
+    width: 160px;
+    height: 241px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    }
+.line_txt03::after,
+.line_txt03::before{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 0%;
+    height: 0%;
+    border: 1px #fff;
+    transition: all 0.5s
+    }
+
+.line_txt03::after {
+    width: 100%;
+    border-style:none solid;
+/*                  보더 위아래  좌우*/
+            
+        }
+.line_txt03::before {
+    height: 100%;
+    border-style:solid none;
+        
+    }
+.line_txt03:hover::after{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    }
+.line_txt03:hover::before{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    }
+/*     청하*/
+
+.itzy{width: 315px;height: 210px;position: relative;transition: all 0.3s;}
+.itzy:hover{transform: scale(1.1);}
+.itzy>p{width: 315px;height: 210px;background: rgba(0,0,0,.5);position: absolute;top: 0;left: 0;display: none}
+
+.line_txt04>h1{position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);text-align: center}
+.line02>li>h1{
+    text-align: center;
+    line-height: 1.5;
+    font-size: 38px;
+    font-family: 'Wemakeprice';
+    width: 380px;
+    color: #0bb63e;
+    text-shadow: -2px 2px 0px wheat;
+    display: none
+    
+}
+.line02>li>h1>span{font-size: 16px;color: #f1f1f1;text-shadow: none}
+.line_txt04{display: none}
+.line_txt04 {
+    width: 260px;
+    height: 161px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    }
+.line_txt04::after,
+.line_txt04::before{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 0%;
+    height: 0%;
+    border: 1px #fff;
+    transition: all 0.5s
+    }
+
+.line_txt04::after {
+    width: 100%;
+    border-style:none solid;
+/*                  보더 위아래  좌우*/
+            
+        }
+.line_txt04::before {
+    height: 100%;
+    border-style:solid none;
+        
+    }
+.line_txt04:hover::after{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    }
+.line_txt04:hover::before{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    }
+
+/*    ITZY*/
+
+.hyun_a{width: 215px;position: relative;transition: all 0.3s;}
+.hyun_a:hover{transform: scale(1.1);}
+.hyun_a>p{width: 215px;height: 295px;background: rgba(0,0,0,.5);position: absolute;top: 0;left: 0;display: none}
+
+.line_txt05>h1{position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);text-align: center}
+.line02>li>h1{
+    text-align: center;
+    line-height: 1.5;
+    font-size: 38px;
+    font-family: 'Wemakeprice';
+    width: 380px;
+    color: #0bb63e;
+    text-shadow: -2px 2px 0px wheat;
+    display: none;
+    line-height: 1.2;
+    
+}
+.line02>li>h1>span{font-size: 16px;color: #f1f1f1;text-shadow: none}
+.line_txt05{display: none}
+.line_txt05 {
+    width: 160px;
+    height: 241px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    }
+.line_txt05::after,
+.line_txt05::before{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 0%;
+    height: 0%;
+    border: 1px #fff;
+    transition: all 0.5s
+    }
+
+.line_txt05::after {
+    width: 100%;
+    border-style:none solid;
+/*                  보더 위아래  좌우*/
+            
+        }
+.line_txt05::before {
+    height: 100%;
+    border-style:solid none;
+        
+    }
+.line_txt05:hover::after{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    }
+.line_txt05:hover::before{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    }
+
+
+.line03{
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    align-items: center;
+    position: relative;
+    top: 400px;
+    transition: all 0.7s;
+}
+.line03.act{top: 0;}
+
+.pentagon{width: 215px;height: 330px;position: relative;transition: all 0.3s;}
+.pentagon:hover{transform: scale(1.1);}
+.pentagon>p{width: 215px;height: 330px;background: rgba(0,0,0,.5);position: absolute;top: 0;left: 0;display: none}
+
+.line_txt06>h1{position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);text-align: center}
+.line03>li>h1{
+    text-align: center;
+    line-height: 1.5;
+    font-size: 38px;
+    font-family: 'Wemakeprice';
+    width: 380px;
+    color: #0bb63e;
+    text-shadow: -2px 2px 0px wheat;
+    display: none;
+    line-height: 1.2;
+    
+}
+.line03>li>h1>span{font-size: 16px;color: #f1f1f1;text-shadow: none}
+.line_txt06{display: none}
+.line_txt06 {
+    width: 160px;
+    height: 284px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    }
+.line_txt06::after,
+.line_txt06::before{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 0%;
+    height: 0%;
+    border: 1px #fff;
+    transition: all 0.5s
+    }
+
+.line_txt06::after {
+    width: 100%;
+    border-style:none solid;
+/*                  보더 위아래  좌우*/
+            
+        }
+.line_txt06::before {
+    height: 100%;
+    border-style:solid none;
+        
+    }
+.line_txt06:hover::after{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    }
+.line_txt06:hover::before{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    }
+/*        펜타곤*/
+
+.bravegirls{width: 315px;height: 210px;position: relative;transition: all 0.3s;}
+.bravegirls:hover{transform: scale(1.1);}
+.bravegirls>p{width: 315px;height: 210px;background: rgba(0,0,0,.5);position: absolute;top: 0;left: 0;display: none}
+
+.line_txt07>h1{position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);text-align: center}
+.line3>li>h1{
+    text-align: center;
+    line-height: 1.5;
+    font-size: 38px;
+    font-family: 'Wemakeprice';
+    width: 380px;
+    color: #0bb63e;
+    text-shadow: -2px 2px 0px wheat;
+    display: none
+    
+}
+.line03>li>h1>span{font-size: 16px;color: #f1f1f1;text-shadow: none}
+.line_txt07{display: none}
+.line_txt07 {
+    width: 260px;
+    height: 161px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    }
+.line_txt07::after,
+.line_txt07::before{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 0%;
+    height: 0%;
+    border: 1px #fff;
+    transition: all 0.5s
+    }
+
+.line_txt07::after {
+    width: 100%;
+    border-style:none solid;
+/*                  보더 위아래  좌우*/
+            
+        }
+.line_txt07::before {
+    height: 100%;
+    border-style:solid none;
+        
+    }
+.line_txt07:hover::after{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    }
+.line_txt07:hover::before{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    }
+
+/*    브레이브걸스*/
+
+.ciipfer{width: 215px;height: 330px;position: relative;transition: all 0.3s;}
+.ciipfer:hover{transform: scale(1.1);}
+.ciipfer>p{width: 215px;height: 330px;background: rgba(0,0,0,.5);position: absolute;top: 0;left: 0;display: none}
+
+.line_txt08>h1{position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);text-align: center}
+.line03>li>h1{
+    text-align: center;
+    line-height: 1.5;
+    font-size: 38px;
+    font-family: 'Wemakeprice';
+    width: 380px;
+    color: #0bb63e;
+    text-shadow: -2px 2px 0px wheat;
+    display: none;
+    line-height: 1.2;
+    
+}
+.line03>li>h1>span{font-size: 16px;color: #f1f1f1;text-shadow: none}
+.line_txt08{display: none}
+.line_txt08 {
+    width: 160px;
+    height: 284px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    }
+.line_txt08::after,
+.line_txt08::before{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 0%;
+    height: 0%;
+    border: 1px #fff;
+    transition: all 0.5s
+    }
+
+.line_txt08::after {
+    width: 100%;
+    border-style:none solid;
+/*                  보더 위아래  좌우*/
+            
+        }
+.line_txt08::before {
+    height: 100%;
+    border-style:solid none;
+        
+    }
+.line_txt08:hover::after{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    }
+.line_txt08:hover::before{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    }
+/*        펜타곤*/
+/* 불꽆축제, 맥주$샴페인*/
+
+#contents{width: 100%;margin-top: 80px;height: 880px;position: relative;}
+.fire_img img{width: 960px;height: 1400px;position: absolute;left: 0;top: -650px;opacity: .5;}
+.fire_img02 img{width: 960px;height: 1000px;position: absolute;right: 0;top: -150px;opacity: .6;}
+
+.cont_inner{width: 1200px;margin: 0 auto;position: relative;
+z-index: 100;}
+.cont_left{float: left;width: 50%;position: relative;}
+.cont_left>h1{font-size: 300px;font-family: 'Wemakeprice';transform: rotate(-10deg);position: absolute;left: 0px;top: 60px;}
+
+.cont_left>p.fire{
+    font-size: 60px;
+    position: absolute;
+    left: 210px;top: 240px; 
+    font-family: 'Wemakeprice';
+    line-height: 1.1;font-weight: 600;
+    color: #c5ff79}
+
+.cont_left>p.fire>span{
+    font-size: 40px;color: #f1f1f1;
+}
+
+.cont_left>p.hot{
+    font-size: 40px;position: absolute;
+    top: 505px;left: 210px;
+    line-height: 1.5; 
+    font-family: 'Wemakeprice'
+}
+
+
+.cont_right{float: right;width: 50%;font-family: 'Wemakeprice';position: relative;height: 100%;}
+
+.cont_right>p.summer{
+    font-size: 40px;line-height: 1.5;
+    position: absolute;
+    right:210px;top: 510px;
+    text-align: right
+}
+
+.cont_right>p.beer{
+    font-size: 60px;
+    position: absolute;
+    top: 240px;right: 190px;
+    text-align: right;
+    font-weight: 600;color: #91e0ff;
+    line-height: 1.1;
+}
+.cont_right>p.beer>span{color: #f1f1f1;font-size: 50px;}
+
+.cont_right>h1{font-size: 300px;position: absolute;right: 0px;top: 60px;transform: rotate(10deg)}
+
+
+
+/* .cont_inner{width: 1200px;margin: 0 auto;position: relative;
+z-index: 100;}
+.cont_left{float: left;width: 50%;position: relative;height: 1400px;background: url(../img/fire\(2-1\).png)no-repeat;opacity: .6;}
+.cont_left>h1{font-size: 300px;font-family: 'Wemakeprice';transform: rotate(-10deg);position: absolute;left: 0;top: 60px;}
+    
+.cont_left>p.fire{font-size: 60px;position: absolute;left: 180px;top: 160px; font-family: 'Wemakeprice';line-height: 1.1;font-weight: 600;color: #c5ff79}
+    
+.cont_left>p.fire>span{font-size: 40px;color: #f1f1f1;}
+    
+.cont_left>p.hot{font-size: 40px;position: absolute;top: 400px;left: 180px;line-height: 1.5; font-family: 'Wemakeprice'}
+
+
+.cont_right{float: right;width: 50%;font-family: 'Wemakeprice';position: relative;height: 100%;}
+
+.cont_right>p.summer{font-size: 40px;line-height: 1.5;position: absolute;right:180px;top: 440px;}
+
+.cont_right>p.beer{font-size: 60px;top: 170px;right: 160px;;position: absolute;text-align: right;font-weight: 600;color: #91e0ff;line-height: 1.1;}
+.cont_right>p.beer>span{color: #f1f1f1;font-size: 50px;}
+
+.cont_right>h1{font-size: 300px;position: absolute;right: 0;top: 60px;transform: rotate(10deg)} */
+
+#lounge{width: 1200px;margin: 100px auto;height: 300px;border: 3px solid #fff;padding: 50px 80px;border-radius: 20px;box-sizing: border-box;}
+
+.lounge_left{width: 400px;height: 100%;float: left;position: relative;}
+.loun_img01{width: 300px;height: 200px;background: url(../img/lounge.png)no-repeat;box-sizing: border-box;text-align: center;position: absolute;left: 50%;margin-left: -150px;}
+.loun_img02{width: 300px;height: 200px;background: url(../img/lounge2.png)no-repeat;box-sizing: border-box;text-align: center;position: absolute;left: 50%;margin-left: -150px;}
+
+.lounge_right{float: right;width: 630px;height: 100%;padding: 30px 20px 30px 95px;font-family: 'Wemakeprice';box-sizing: border-box;font-size: 30px;text-align: left;position: relative;}
+
+.jim{color: #7cd6bf;position: absolute;top: 10px;}
+.call{color: #f4f4f4;position: absolute;top: 50px;}
+.care{font-size: 12px;color:#999;position: absolute;top: 90px;}
+.reserve{margin-top: 20px;width: 100px;height: 40px;}
+.reserve a{display: block;font-size: 18px;margin-right: 30px;color: #000;line-height: 40px;text-align: center;font-weight: bold;width: 100px;height: 40px;background-color: #eee;text-align: center;border-radius: 10px;position: absolute;left: 100px;transition: all 0.3s;bottom: 10px;}
+.reserve a:hover{border: 1px solid #f1f1f1;background: #000;color: #f1f1f1;}
+/* 초록 #0bb63e
+보라 #9c42c8
+핑크 #f73170
+하늘 #91e0ff
+청록 #7cd6bf
+파랑 #5480fe */
+.ready{width: 1200px;height: 400px;margin: 140px auto;;padding: 20px;;position: relative;}
+.ready h1{font-family: 'Wemakeprice';text-align: center;font-size: 30px;}
+.ready .icon{width: 300px;height: 188px;background: url(../img/ixon.png)no-repeat;margin-top: 50px;position: absolute;left: 50%;transform: translateX(-50%);bottom: 0;}
+
+
+.copyright{width: 100%;height: 50px;line-height: 50px;}
+
+.copyright p{text-align: center;color: #f1f1f1;}
+
+.popup{width: 400px;height: 320px;background-color: #eee;position: absolute;top: 150px;right: 200px;background-color: rgba(0, 0, 0, 1);padding: 30px;text-align: center;}
+
+.popup h1{position: absolute;right: 30px;top: 30px;font-size: 20px;cursor: pointer;}
+
+.pop_img{width: 340px;height: 100px;;display: flex;justify-content: space-around;align-items: center;text-align: center;position: absolute;bottom: 40px;}
+.pop_img li{border: 1px solid #fff;border-radius: 10px;}
+.pop_img li:nth-child(2) img{height: 80px;}
+.popup p {width: 340px;margin-top: 20px;line-height:10px;}
+.popup p.poptxt01{font-size: 20px;}
+.poptxt01 span{color: #91e0ff;font-weight: 600;}
+.popup p.poptxt02{font-size: 16px;}
+.popup p.poptxt03{font-size: 16px;}
+.popup p.poptxt04{color: #999;font-size: 12px;}

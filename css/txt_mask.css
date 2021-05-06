@@ -1,0 +1,156 @@
+@charset "utf-8";
+
+
+@font-face {
+    font-family: "bboolldd";
+    src: url("../font_face/FredokaOne-Regular.ttf")
+}
+
+@font-face {
+    font-family: "stream";
+    src: url("../font_face/Pacifico-Regular.ttf")
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none
+}
+
+body {
+    font-family: "stream";
+    font-size: 16px;
+    line-height: 150%;
+    color: #444
+}
+
+a {
+    text-decoration: none;
+    color: #444
+}
+
+.clear {
+    clear: both
+}
+
+#wrap {}
+
+.sec01 .inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/*텍스트 마스크 효과*/
+.sec01 {
+    height: 100vh;
+    background: #111;
+    
+    
+}
+
+.nav_list {
+    position: relative;
+    z-index: 30;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nav_list li {
+    margin: 40px 0;
+}
+
+.nav_list li a {
+    ;
+    font-size: 80px;
+    color: #fff;
+    line-height: 1;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.5s;
+}
+
+.nav_list li a:hover{
+    transform: :translateX(-10px)
+}
+
+.nav_list li a .txt {
+    position: relative;
+    z-index: 30;
+    display: block;
+    animation: text_opa 2s 1s 1;
+/*                       실행되는 시간 / 딜레이 / 반복*/
+}
+
+@keyframes text_opa {
+
+    0% {
+        opacity: 0;
+        color: #3535ff;
+        transform: translateX(-50%)
+    }
+
+    100% {
+        opacity: 1;
+        color: #fff;
+        transform: translateX(0%)
+    }
+
+}
+
+/*.nav_list li a .txt*/
+
+.nav_list li a .mask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: #fff;
+    animation: text_mask 2s 1;
+    
+}
+
+@keyframes text_mask {
+
+    0% {
+        width: 0;
+        transform: translateX(0%)
+    }
+
+    50% {
+        width: 100%;
+        transform: translateX(0%)
+    }
+
+    100% {
+        width: 100%;
+        ;
+        transform: translateX(101%)
+    }
+}
+
+/*ketframes*/
+
+.nav_list li a .mask2 {
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    z-index: -1;
+    width: 0%;
+    height: 40%;
+    display: block;
+    background: yellow;
+    transition: all 0.5s;
+}
+
+.nav_list li a:hover .mask2 {
+    width: 100%;
+}

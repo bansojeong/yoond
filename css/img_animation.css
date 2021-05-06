@@ -1,0 +1,154 @@
+@charset "utf-8";
+
+/*reset*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+.clear {
+    clear: both
+}
+body{height: 10000px;}
+
+
+/*style*/
+
+.wrap {}
+
+.img_mask {
+    background: #111
+}
+
+.img_mask .prd_mask {}
+
+.img_mask .prd_mask .tit_wrap {
+    padding: 120px 0 80px 0;
+
+}
+
+.img_mask .prd_mask .tit_wrap h2 {
+    font-size: 60px;
+    color: #fff;
+    text-align: center;
+}
+
+.img_mask .prd_mask .tit_wrap p {
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+}
+
+.prd_mask .img_list {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.prd_mask .img_list li {
+    margin: 0 20px 20px 0;
+    width: calc(50% - 20px);
+    overflow: hidden;
+    position: relative;
+}
+
+.prd_mask .img_list li::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    content: "";
+    transition: 2.5s;
+
+}
+
+.prd_mask.active .img_list li::after {
+    width: 0%;
+}
+
+.prd_mask .img_list li:nth-child(even) {
+    top: -20px;
+    margin: 0 0 20px 0;
+}
+
+.prd_mask .img_list li:nth-child(even):after {
+    right: auto;
+    left: 0;
+}
+
+.prd_mask .img_list li .img_cont {
+    transform: translateX(-101%);
+    transition: 1.2s 0.5s;
+}
+
+
+.prd_mask.active .img_list li .img_cont {
+    transform: translateX(0%)
+}
+
+.img_mask .text_img {
+    padding-top: 150px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img_mask .text_img .text_area {
+    color: white;
+    font-size: 40px;
+    width: 800px;
+    padding: 0 50px;
+    text-align: right;
+    opacity: 0;
+    transform: translateX(-150%);
+    transition: 1s
+}
+.img_mask .text_img.active .text_area{
+    opacity: 1;
+    transform: translateX(0%)
+}
+
+.img_mask .text_img .text_area h3 {
+    font-size: 40px
+}
+
+.img_mask .text_img .text_area p {
+    font-size: 20px
+}
+
+.img_mask .text_img .img_area {
+    width: 30%;
+    position: relative
+}
+
+.img_mask .text_img .img_area::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: #111;
+    transition: 2s .5s
+}
+
+.text_img.active .img_area::after{height: 0px;}
